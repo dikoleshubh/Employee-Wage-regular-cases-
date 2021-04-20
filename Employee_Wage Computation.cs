@@ -19,7 +19,7 @@ namespace Employee_Wage
             Random random = new Random();
             int EmpCheck = random.Next(0, 3); ////Random Function for Employee selection
             
-            while (days < workingdays)////condtion check for Employee exceeding days
+            while (days < workingdays)////condtion check for Employee exceeding days i.e. 20
             {
                 days++;
 
