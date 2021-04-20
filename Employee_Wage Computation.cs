@@ -9,23 +9,20 @@ namespace Employee_Wage
     class WageComputation
     {
         static void Wage_Compute()
-        {
+        {   int PRESENT = 1;
             int FULL_TIME = 1;
             int PART_TIME = 2;
             int EMP_RATE_PER_HOUR = 20;
             int emphrs = 0;
             int empWage = 0;
             Random random = new Random();
-            int EmpCheck = random.Next(0, 3); ////Random Function for Hours calculation
+            int EmpCheck = random.Next(0, 3); ////Random Function for attendace
             if (EmpCheck == FULL_TIME)
             {
                 emphrs = 8;
 
             }
-            else if (EmpCheck == PART_TIME)
-            {
-                emphrs = 4;
-            }
+            
             else
             {
                 emphrs = 0;
