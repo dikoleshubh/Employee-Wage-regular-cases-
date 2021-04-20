@@ -7,7 +7,8 @@ namespace Employee_Wage
         static void Main(string[] args)
         {
             Console.WriteLine("EMPLOYEE WAGE ");
-            WageComputation.Wage_Compute();
+            WageComputation.Wage_Compute("Walmart", 100, 20, 50);
+            WageComputation.Wage_Compute("WHATEVER Mart", 110, 20, 50);
         }
     }
 }
