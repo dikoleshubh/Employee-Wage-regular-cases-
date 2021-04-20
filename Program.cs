@@ -7,8 +7,15 @@ namespace Employee_Wage
         static void Main(string[] args)
         {
             Console.WriteLine("EMPLOYEE WAGE ");
-            WageComputation.Wage_Compute("Walmart", 100, 20, 50);
-            WageComputation.Wage_Compute("WHATEVER Mart", 110, 20, 50);
+            EmployeeWageComputation mart = new EmployeeWageComputation("WhateverMArt", 20, 100,200);
+            EmployeeWageComputation nmart = new EmployeeWageComputation("Flipkart", 20, 104, 200);
+
+
+
+            mart.Wage_Compute(); //call method
+            Console.WriteLine(mart.toString());
+            nmart.Wage_Compute();//call method
+            Console.WriteLine(nmart.toString());
         }
     }
 }
