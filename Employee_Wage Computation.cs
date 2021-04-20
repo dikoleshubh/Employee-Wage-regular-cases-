@@ -10,28 +10,26 @@ namespace Employee_Wage
     {
         static void Wage_Compute()
         {
-            int FULL_TIME = 1;
-            int PART_TIME = 2;
+            const int FULL_TIME = 1;
+            const int PART_TIME = 2;
             int EMP_RATE_PER_HOUR = 20;
             int emphrs = 0;
             int empWage = 0;
             Random random = new Random();
-            int EmpCheck = random.Next(0, 3); ////Random Function for Hours calculation
-            if (EmpCheck == FULL_TIME) ////Full time employee
+            int EmpCheck = random.Next(0, 3); ////Random Function for Employee selection
+            switch (EmpCheck)          //Switch case Statment
             {
-                emphrs = 8;
-
-            }
-            else if (EmpCheck == PART_TIME)////Full time employee
-            {
-                emphrs = 4;
-            }
-            else
-            {
-                emphrs = 0;
+                case FULL_TIME:         //Employee is FullTime
+                    emphrs = 8;
+                    break;
+                case PART_TIME:          //Employee is Part Time
+                    emphrs = 4;
+                    break;
+                default:
+                    emphrs = 0;
+                    break;
             }
             empWage = EMP_RATE_PER_HOUR * emphrs;//// Emp Wage calculation
-
             Console.WriteLine("Employe Wage Per Day:- " + empWage);
         }
     }
