@@ -17,12 +17,12 @@ namespace Employee_Wage
             int empWage = 0;
             Random random = new Random();
             int EmpCheck = random.Next(0, 3); ////Random Function for Hours calculation
-            if (EmpCheck == FULL_TIME)
+            if (EmpCheck == FULL_TIME) ////Full time employee
             {
                 emphrs = 8;
 
             }
-            else if (EmpCheck == PART_TIME)
+            else if (EmpCheck == PART_TIME)////Full time employee
             {
                 emphrs = 4;
             }
