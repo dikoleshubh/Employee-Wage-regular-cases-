@@ -8,18 +8,18 @@ namespace Employee_Wage
 {
     class WageComputation
     {
-        public static void Wage_Compute()
+        public static int Wage_Compute(string company, int EMP_RATE_PER_HOUR,int workingDays,int maxhours)
         {
-            const int FULL_TIME = 1; ////Employee Constants
+            const int FULL_TIME = 1; 
             const int PART_TIME = 2;
-            int EMP_RATE_PER_HOUR = 20;
-            int emphrs = 0, workingdays=20;
+            
+            int emphrs = 0;
             int empWage = 0 , totalempwage;
             int days = 0;
             Random random = new Random();
             int EmpCheck = random.Next(0, 3); ////Random Function for Employee selection
             
-            while (days < workingdays)////condtion check for Employee exceeding days i.e. 20
+            while (days < workingDays && emphrs < maxhours)////condtion check for Employee exceeding days
             {
                 days++;
 
@@ -38,10 +38,10 @@ namespace Employee_Wage
             }
             empWage = EMP_RATE_PER_HOUR * emphrs;//// Emp Wage calculation/day
             totalempwage = empWage * days;
-
+            Console.WriteLine($"Name of Compnay is {company} " );
             Console.WriteLine("Employe Wage Per Day & Month:- " + empWage +totalempwage);
-            return totalempwage;
-
+            return (totalempwage);
+            
         }
     }
 }
