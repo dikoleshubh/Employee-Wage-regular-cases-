@@ -8,7 +8,7 @@ namespace Employee_Wage
 {
     class WageComputation
     {
-        static void Wage_Compute()
+        public static void Wage_Compute()
         {
             const int FULL_TIME = 1; ////Employee Constants
             const int PART_TIME = 2;
@@ -40,8 +40,8 @@ namespace Employee_Wage
             totalempwage = empWage * days;
 
             Console.WriteLine("Employe Wage Per Day & Month:- " + empWage +totalempwage);
+            return totalempwage;
 
-            
         }
     }
 }
